@@ -1,0 +1,46 @@
+.fonts{
+    margin-left:50px;
+    margin-top: 400px;
+    font-size: 30px;
+    }
+    .alignments{
+        margin-left: 50px;
+        margin-top: 20px;
+        
+    }
+    .alignmentsa{
+        margin-left: 50px;
+        width:450px;
+        height: 25px;
+        margin-top: 10px;
+        
+    }
+    
+    .bgcolor{
+        background-color: aliceblue;
+        min-height: 100vh;
+        display: flex;
+        justify-content: left;
+        align-items: left;
+     
+      }
+      .bgcolora{
+        margin-left: 700px;
+        /* display: flex; */
+        align-items: right;
+        margin-bottom: 200px;
+      }
+      .colors{
+          background-color:hsl(234, 89%, 48%);
+          margin-top: 20px; 
+          margin-left: 50px;
+          font-size: 20px;
+          color: white;
+         
+      }
+      .colora{
+        margin-top: 50px;
+        margin-left: 30px;
+        text-decoration: none;
+      }
+  

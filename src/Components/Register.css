@@ -1,0 +1,37 @@
+.fonts{
+    margin-left:100px;
+    margin-top: 100px;
+    font-size: 20px;
+    }
+    .alignment{
+        margin-left: 100px;
+        
+    }
+    .alignmenta{
+        margin-left: 100px;
+        width:250px;
+        height: 20px;
+        margin-top: 10px;
+        
+    }
+    
+    .backgrounda{
+        background-color: aliceblue;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+      }
+      .colors{
+          background-color:#0259e3;
+          margin-top: 20px; 
+          margin-left: 100px;
+          font-size: 20px;
+          color: white;
+         
+      }
+      .colora{
+        margin-top: 50px;
+        margin-left: 30px;
+        text-decoration: none;
+      }
