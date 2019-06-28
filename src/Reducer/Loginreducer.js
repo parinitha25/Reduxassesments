@@ -2,7 +2,8 @@ import *as ActionTypes from '../Action/types';
 
 const intialState = {
    name:'',
-   password:''
+   password:'',
+
 
     
 };

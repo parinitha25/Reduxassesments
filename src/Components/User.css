@@ -1,20 +1,16 @@
 .fonts{
-    margin-left:50px;
-    margin-top: 400px;
-    font-size: 30px;
+    margin-left:10px;
+    margin-top: 10px;
+    font-size: 20px;
     }
     .alignments{
-        margin-left: 50px;
+        margin-left: 30px;
         margin-top: 20px;
+        width:500px;
+        height: 45px;
         
     }
-    .alignmentsa{
-        margin-left: 50px;
-        width:450px;
-        height: 25px;
-        margin-top: 10px;
-        
-    }
+   
     
     .bgcolor{
         background-color: aliceblue;
@@ -33,7 +29,7 @@
       .colors{
           background-color:hsl(234, 89%, 48%);
           margin-top: 20px; 
-          margin-left: 50px;
+          margin-left: 30px;
           font-size: 20px;
           color: white;
          
@@ -43,4 +39,4 @@
         margin-left: 30px;
         text-decoration: none;
       }
-  
+ 
