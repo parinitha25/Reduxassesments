@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {login} from '../Action/LoginAction';
-import {register} from '../Action/Register';
 import  './Login.css';
 
 class Logincomponent extends Component{
@@ -46,7 +45,6 @@ class Logincomponent extends Component{
     return(
       <div className="background"> 
         <form>
-          <h1>{this.props.message}</h1>
           <label className="font" ><b>Login</b></label><br/>
           <label className="align"><b>Username</b></label><br/>
             <input className="aligna" type='text' name="Fname" onChange={this.handleChange}/><br/>
@@ -64,7 +62,6 @@ class Logincomponent extends Component{
 const mapStateToProps=(state)=>{
   const{Fname}=state.Loginreducer;
   const{Password}=state.Loginreducer;   
-  const{message}=state.Registereducer;
-  return{Fname,Password,message};
+  return{Fname,Password};
 };
-export default connect(mapStateToProps,{login,register})(Logincomponent);
+export default connect(mapStateToProps,{login})(Logincomponent);
