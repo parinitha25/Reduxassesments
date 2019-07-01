@@ -1,42 +1,41 @@
 .fonts{
-    margin-left:10px;
-    margin-top: 10px;
-    font-size: 20px;
-    }
-    .alignments{
-        margin-left: 30px;
-        margin-top: 20px;
-        width:500px;
-        height: 45px;
-        
-    }
-   
-    
-    .bgcolor{
-        background-color: aliceblue;
-        min-height: 100vh;
-        display: flex;
-        justify-content: left;
-        align-items: left;
-     
-      }
-      .bgcolora{
-        margin-left: 700px;
-        /* display: flex; */
-        align-items: right;
-        margin-bottom: 200px;
-      }
-      .colors{
-          background-color:hsl(234, 89%, 48%);
-          margin-top: 20px; 
-          margin-left: 30px;
-          font-size: 20px;
-          color: white;
-         
-      }
-      .colora{
-        margin-top: 50px;
-        margin-left: 30px;
-        text-decoration: none;
-      }
+  margin-left:10px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+.alignments{
+  margin-left: 30px;
+  margin-top: 20px;
+  width:500px;
+  height: 45px;      
+}
+.bgcolor{
+  background-color: aliceblue;
+  min-height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: left;   
+}
+.bgcolora{
+  margin-left: 700px;
+  align-items: right;
+  margin-bottom: 200px;
+}
+.colors{
+  background-color:hsl(234, 89%, 48%);
+  margin-top: 20px; 
+  margin-left: 30px;
+  font-size: 20px;
+  color: white;
+}
+.colora{
+  margin-top: 50px;
+  margin-left: 30px;
+  text-decoration: none;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
  

@@ -1,73 +1,70 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {login} from '../Action/LoginAction';
+import {register} from '../Action/Register';
 import  './Login.css';
-import browserhistory  from '../history/browserhistory';
+
 class Logincomponent extends Component{
-
-     constructor(props){
-        super(props);
-        this.state={
-            Fname:'',
-            Password:'',
-            nrequired:'',
-            prequired:''
-           
-        }
+  constructor(props){
+    super(props);
+    this.state={
+      Fname:'',
+      Password:'',
+      nrequired:'',
+      prequired:''     
     }
-    handleChange=(e)=>{
-
-        this.setState({[e.target.name]:e.target.value});
-        
-    }
-    handleSubmit=(e)=>{
-       
-        if(this.state.Fname.length==0 && this.state.Password.length==0)
-        {
-        this.setState({nrequired:"user name required",prequired:"password requierd"})
-        
-        }
-        else if(this.state.Fname.length==0)
-        {
-        this.setState({nrequired:"user name required"})
+  }
+  handleChange=(e)=>{
+    this.setState({[e.target.name]:e.target.value});      
+  }
+  handleSubmit=(e)=>{
+    var password_regulr=/^[@#][A-Za-z0-9]{7,13}$/;
+      if(this.state.Fname.length==0 && this.state.Password.length==0)
+      {
+        this.setState({nrequired:"Username is required",prequired:"Password is requierd"})
+      }
+      else if(this.state.Fname.length==0)
+      {
+        this.setState({nrequired:"Username is required"})
         return true;
-        } 
-        
-        else if (this.state.Password.length==0)
-        {
-        this.setState({prequired:"password requierd"})
+      }       
+      else if (this.state.Password.length==0 )
+      {
+        this.setState({prequired:"Password is requierd"})
         return true;
-        }
-        else
-        {
-        browserhistory.push("pract3");
-        }
-        }       
-       
-    render(){
-        return(
-            <div className="background"> 
-            <form name="forms">
-            <label className="font" >Login</label><br/><br/>
-            <label className="align" >Username</label><br/>
-                    <input className="aligna" type='text' name="Fname" onChange={this.handleChange}/><br/><br/>
-                   <p>{this.state.nrequired}</p>
-            <label className="align">Password</label><br/>
-                    <input className="aligna" type='text'  name="Password" onChange={this.handleChange}/><br/>
-                    <p>{this.state.prequired}</p>
-                    
-            </form>    
-            <button onClick={this.handleSubmit} className="colorc">Login</button>
-            <a href='/pract2' className="colorb">Register</a>
-           
-            </div>
-        );
-    }
+      } 
+      else if(password_regulr.test(this.state.Password)==false){
+        this.setState({prequired:"Invalid password"});
+        return true;
+      }
+      else
+      {
+        this.props.login();
+      }
+  }              
+  render(){
+    return(
+      <div className="background"> 
+        <form>
+          <h1>{this.props.message}</h1>
+          <label className="font" ><b>Login</b></label><br/>
+          <label className="align"><b>Username</b></label><br/>
+            <input className="aligna" type='text' name="Fname" onChange={this.handleChange}/><br/>
+            <p>{this.state.nrequired}</p>
+          <label className="align"><b>Password</b></label><br/>
+            <input className="aligna" type='text'  name="Password" onChange={this.handleChange}/><br/>
+            <p>{this.state.prequired}</p>
+        </form>          
+          <button onClick={this.handleSubmit} className="colorc">Login</button>
+          <a href='/pract2' className="colorb">Register</a>          
+      </div>
+    );
+  }
 }
-// const mapStateToProps=(state)=>{
-//     const{name}=state.Loginreducer;
-//     const{password}=state.Loginreducer;  
-   
-//     return{name,password};
-// };
-export default Logincomponent;
+const mapStateToProps=(state)=>{
+  const{Fname}=state.Loginreducer;
+  const{Password}=state.Loginreducer;   
+  const{message}=state.Registereducer;
+  return{Fname,Password,message};
+};
+export default connect(mapStateToProps,{login,register})(Logincomponent);

@@ -1,19 +1,17 @@
 import *as ActionTypes from '../Action/types';
+import browserhistory from '../history/browserhistory';
 
 const intialState = {
-   name:'',
-   password:'',
-
-
-    
+  Fname:'',
+  Password:''               
 };
 export default(state=intialState,action)=>{
-    switch(action.type){
-        case ActionTypes.LOGIN:{
-            return{...state}
-        }
-     
-        default: 
-            return state;
+  switch(action.type){
+    case ActionTypes.LOGIN:{
+      browserhistory.push("/pract3");
+      return{...state}
     }
+    default: 
+      return state;
+  }
 }

@@ -27,9 +27,9 @@ const Useredit = props => {
         props.updateUser(user.id, user)
       }}
     >
-      <label className='fonts'>Name</label><br/>
+      <label className='fonts'><b>Name</b></label><br/>
       <input type="text" name="name" value={user.name} onChange={handleInputChange} className="alignments" /><br/>
-      <label className='fonts'>Username</label><br/>
+      <label className='fonts'><b>Username</b></label><br/>
       <input type="text" name="username" value={user.username} onChange={handleInputChange} className="alignments" /><br/>
       <button  className="alignmentsa">Update user</button>
       <button onClick={() => props.setEditing(false)} className="button muted-button">

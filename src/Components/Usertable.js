@@ -11,7 +11,7 @@ const UserTable = props => (
       </tr>
     </thead>
     <tbody>
-        <hr/>
+      
       {props.users.length > 0 ? (
         props.users.map(user => (
           <tr key={user.id}>
@@ -44,4 +44,4 @@ const UserTable = props => (
   </table>
 )
 
-export default UserTable
+export default UserTable;
